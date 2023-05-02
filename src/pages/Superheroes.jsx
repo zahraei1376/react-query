@@ -1,7 +1,7 @@
-const Superheroes = () => {
+const SuperHeroes = () => {
     return (
         <div>Super Heroes Page</div>
     )
 }
 
-export default Superheroes;
+export default SuperHeroes;
