@@ -1,4 +1,4 @@
-import { Link, Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import RQSuperHeroes from './pages/RQSuperheroes';
@@ -21,8 +21,11 @@ const App = () => {
             </li>
           </ul>
         </nav>
-        <Switch>
-          <Route path='/super-heroes'>
+        <Routes>
+          <Route exact path="/super-heroes" element={<SuperHeroes />} />
+          <Route exact path="/rq-super-heroes" element={<RQSuperHeroes />} />
+          <Route exact path="/" element={<Home />} />
+          {/* <Route path='/super-heroes'>
             <SuperHeroes />
           </Route>
           <Route path='/rq-super-heroes'>
@@ -30,8 +33,8 @@ const App = () => {
           </Route>
           <Route path='/'>
             <Home />
-          </Route>
-        </Switch>
+          </Route> */}
+        </Routes>
       </div>
     </Router>
   )
